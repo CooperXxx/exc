@@ -4,7 +4,7 @@ from datetime import datetime
 
 def main():
     server = socket(type=SOCK_STREAM,family=AF_INET)
-    server.bind(('211.65.196.49', 6789))
+    server.bind(('10.203.150.247', 6789))
     server.listen(512)
 
     print("server start to listen:")
