@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>场馆预约</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/a.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container" style="height: 100px"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                <h1>SEU 场馆预约结果查询</h1>
+                <h3>通过预约号查询</h3>
+                <form action="/find" method="POST">
+                    <div class="form-group">
+                        <label for="usr">预约登记查询号:</label>
+                        <input type="text" class="form-control" id="reserveid" name="rsid">
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-2">查询</button>
+                </form>
+                <h3>通过一卡通号查询</h3>
+                <form action="/find2" method="POST">
+                    <div class="form-group">
+                        <div class="form-group">
+                        <label for="usr">学号:</label>
+                        <input type="text" class="form-control" id="usr" name="ssid" pattern="\d{9}" placeholder="22xxxxxxx"
+                            oninput="check(this,'格式不正确，输入9位学号')" required="required">
+                    </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-2">查询</button>
+                </form>
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="/static/js/a.js/"></script>
+
+</body>
+
+</html>
